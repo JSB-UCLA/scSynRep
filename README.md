@@ -23,52 +23,6 @@ install.packages("devtools")
 devtools::install_github("JSB-UCLA/scSynRep")
 ```
 
-### Dependencies
-
-The package requires several Bioconductor packages. Install them first:
-
-```r
-if (!require("BiocManager", quietly = TRUE)) {
-  message("Installing BiocManager...")
-  install.packages("BiocManager")
-} else {
-  message("✅ Exists: BiocManager")
-}
-
-bioc_pkgs <- c("scDesign3", "SingleCellExperiment", "SummarizedExperiment", 
-               "BiocParallel", "S4Vectors")
-
-cran_pkgs <- c("Seurat", "tidyverse", "data.table", "foreach", "doParallel", 
-               "nortest", "tmvtnorm", "truncnorm", "TruncatedNormal", 
-               "corpcor", "MASS")
-
-install_if_missing <- function(packages, source = "cran") {
-  # Get a list of currently installed packages
-  installed_list <- rownames(installed.packages())
-  
-  for (pkg in packages) {
-    if (pkg %in% installed_list) {
-      message(paste("✅ Exists:", pkg))
-    } else {
-      message(paste("⬇️ Installing:", pkg, "..."))
-      
-      if (source == "bioc") {
-        # 'update = FALSE' prevents it from trying to update all your other packages
-        BiocManager::install(pkg, update = FALSE, ask = FALSE) 
-      } else {
-        install.packages(pkg)
-      }
-    }
-  }
-}
-
-message("\n--- Checking Bioconductor Packages ---")
-install_if_missing(bioc_pkgs, source = "bioc")
-
-message("\n--- Checking CRAN Packages ---")
-install_if_missing(cran_pkgs, source = "cran")
-```
-
 ## Quick Start
 
 ### Basic Usage
