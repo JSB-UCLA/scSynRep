@@ -1,0 +1,24 @@
+# R files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Package build files
+*.tar.gz
+*.Rcheck/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output directories (user-specific)
+output/
+results/

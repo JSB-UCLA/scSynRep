@@ -1,0 +1,44 @@
+Package: scSynRep
+Title: Generate Synthetic Single-Cell RNA-seq Replicates from Bulk RNA-seq Data
+Version: 0.1.0
+Authors@R: 
+    person("Chengfeng", "Jiang", email = "chengfeng@example.com", role = c("aut", "cre"))
+Description: A pipeline for generating synthetic single-cell RNA-seq replicates 
+    by integrating bulk RNA-seq distribution fitting with scDesign3-based 
+    single-cell modeling. The package filters and preprocesses both bulk and 
+    single-cell data, fits multivariate distributions to bulk expression, 
+    models single-cell expression using copulas, and generates synthetic 
+    replicates that preserve biological variation.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    scDesign3,
+    SingleCellExperiment,
+    SummarizedExperiment,
+    S4Vectors,
+    BiocParallel,
+    Seurat,
+    tidyverse,
+    data.table,
+    foreach,
+    doParallel,
+    parallel,
+    nortest,
+    tmvtnorm,
+    truncnorm,
+    TruncatedNormal,
+    corpcor,
+    MASS,
+    stats
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+biocViews: SingleCell, RNASeq, Transcriptomics, GeneExpression, Simulation
+URL: https://github.com/JSB-UCLA/scSynRep
+BugReports: https://github.com/JSB-UCLA/scSynRep/issues
