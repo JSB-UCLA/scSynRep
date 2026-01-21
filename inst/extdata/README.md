@@ -1,6 +1,6 @@
 # Example Data Directory
 
-This directory (`inst/extdata/`) is where you should place your example data files.
+This directory (`inst/extdata/`) is where you should place your data files.
 
 ## Required Data Format
 
@@ -25,13 +25,4 @@ Your scRNA-seq matrix should be a sparse or dense matrix with:
 ```r
 saveRDS(bulk_matrix, "inst/extdata/bulk_example.rds")
 saveRDS(sc_matrix, "inst/extdata/sc_example.rds")
-```
-
-3. The data will be accessible after package installation:
-```r
-bulk_path <- system.file("extdata", "bulk_example.rds", package = "scSynRep")
-sc_path <- system.file("extdata", "sc_example.rds", package = "scSynRep")
-
-bulk_data <- readRDS(bulk_path)
-sc_data <- readRDS(sc_path)
 ```
