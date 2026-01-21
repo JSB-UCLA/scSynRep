@@ -1,7 +1,5 @@
 # scSynRep
 
-[![R-CMD-check](https://github.com/JSB-UCLA/scSynRep/workflows/R-CMD-check/badge.svg)](https://github.com/JSB-UCLA/scSynRep/actions)
-
 Generate synthetic single-cell RNA-seq samples by mapping bulk RNA-seq distribution fitting with scDesign3-based single-cell modeling.
 
 ## Overview
