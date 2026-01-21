@@ -2,7 +2,7 @@ Package: scSynRep
 Title: Generate Synthetic Single-Cell RNA-seq Replicates from Bulk RNA-seq Data
 Version: 0.1.0
 Authors@R: 
-    person("Chengfeng", "Jiang", email = "chengfeng@example.com", role = c("aut", "cre"))
+    person("Chengfeng", "Jiang", email = "chengfeng@ucla.edu", role = c("aut", "cre"))
 Description: A pipeline for generating synthetic single-cell RNA-seq replicates 
     by integrating bulk RNA-seq distribution fitting with scDesign3-based 
     single-cell modeling. The package filters and preprocesses both bulk and 
